@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic Planner — Ogugua Elizabeth Ebere</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="brand"><span class="dot">&lt;</span>Ogugua.Elizabeth<span class="dot">/&gt;</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Stay on track</p>
+      <h1>Academic Planner</h1>
+      <p>Track your assignments, deadlines, and study sessions. Tasks are saved locally so they persist across sessions.</p>
+    </div>
+
+    <div class="planner-stats">
+      <div class="hud-panel"><b id="totalStat">0</b><span>Total Tasks</span></div>
+      <div class="hud-panel"><b id="pendingStat">0</b><span>Pending</span></div>
+      <div class="hud-panel"><b id="completedStat">0</b><span>Completed</span></div>
+    </div>
+
+    <form class="planner-controls" id="plannerForm" onsubmit="return false;">
+      <label for="taskInput" class="visually-hidden">New task</label>
+      <input type="text" id="taskInput" class="field" placeholder="Add a new task, e.g. 'Submit COS 106 assignment'">
+      <select id="prioritySelect" class="field">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="button" id="addTaskBtn" class="btn btn-primary">+ Add Task</button>
+    </form>
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <div class="task-list" id="taskList"></div>
+
+    <div class="empty-state" id="emptyState">
+      <div class="glyph">🗂️</div>
+      <p class="empty-text">No tasks logged yet. Add one above to get started.</p>
+    </div>
+
+    <div class="hud-panel tip-panel">
+      <h4>How to use the Planner</h4>
+      <ul>
+        <li>Type a task, choose a priority level, and click <strong>Add Task</strong> (or press Enter).</li>
+        <li>Click the circle on the left to mark a task as done.</li>
+        <li>Click the ✕ on the right to remove a task permanently.</li>
+        <li>Use the filter buttons to view All, Pending, or Completed tasks.</li>
+        <li>Your tasks are saved automatically in your browser — they'll be here when you return.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="planner.html">Planner</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="copyright">© 2026 Ogugua Elizabeth Ebere · COS 106 Term Project · MIVA Open University</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/planner.js"></script>
+</body>
+</html>
+
